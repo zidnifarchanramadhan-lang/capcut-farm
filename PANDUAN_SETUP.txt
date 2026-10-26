@@ -1,0 +1,46 @@
+============================================================
+              PANDUAN PENGGUNAAN ZAYSE CAPCUT FARM
+============================================================
+
+1. SYARAT AWAL:
+   - Install Python 3.11 / 3.12 / 3.13 / 3.14 (Download di: https://www.python.org/downloads/)
+   - PENTING: Saat install Python di Windows, WAJIB CENTANG opsi:
+     [v] "Add python.exe to PATH"
+
+2. CARA INSTALL (Hanya Sekali di Awal):
+   - Klik 2x file: 'install.bat'
+   - Tunggu sampai muncul pesan "INSTALASI BERHASIL".
+
+3. METODE REGISTRASI & PROVIDER EMAIL (Di file config.json):
+   - "signup_mode": "tiktok" (DEFAULT & DISARANKAN)
+     Otomatis mendaftar akun TikTok terlebih dahulu menggunakan email domain
+     kamu via API TempMail / YourMail, lalu login ke CapCut via
+     TikTok SSO ("Continue with TikTok"). Metode ini memiliki trust score tinggi
+     sehingga penawaran Free Trial 7 Hari (Rp0) / Diskon dapat muncul!
+   - "signup_mode": "email"
+     Mendaftar langsung di halaman CapCut via email (tanpa TikTok).
+
+4. PILIHAN PROVIDER EMAIL (Di file config.json):
+   - Pilihan A: "tempmail" / "yourmail" (DEFAULT & GRATIS)
+     Menggunakan REST API TempMail / YourMail.
+     Endpoint API dapat diatur di "yourmail_api_url" pada config.json.
+   - Pilihan B: "gmail_dot" (Gmail Dot Trick)
+     Isi "gmail_address" dan "gmail_app_password" di config.json.
+
+5. SETTING PROXY (Opsional, di file proxies.txt):
+   - Buka file 'proxies.txt' pakai Notepad jika ingin menggunakan proxy.
+   - Format didukung:
+     host:port:user:pass
+     user:pass:host:port
+     http://user:pass@host:port
+     socks5://user:pass@host:port
+
+6. CARA MENJALANKAN:
+   - Klik 2x 'farm.bat' -> Masukkan jumlah target akun promo -> Enter.
+
+7. LOKASI HASIL AKUN:
+   - Akun CapCut yang berhasil klaim promo tersimpan di folder 'accounts/'.
+   - File: capcut_accounts_YYYYMMDD_HHMMSS.txt
+   - Format: email----password----nama----link_pembayaran_cashier
+   - Akun yang tidak mendapat promo tersimpan di: capcut_accounts_no_promo.txt
+============================================================
